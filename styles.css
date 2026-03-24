@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* default styles!! */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* body!! */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+
+svg {
+    fill: #fff;
+    width: 28px; 
+}
+
+/* main!! */
+main {
+    display: flex;
+    width: 100%;
+}
+
+
+/* side-bar section!! */
+.side-bar {
+    width: 27% auto; 
+    padding: 1% 0 0 2%;
+}
+.side-bar a {
+    text-decoration: none; 
+    color: #fff;
+    font-size: 1.75rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 18px;
+    padding: 10px 18px;
+    width: auto;   
+    border-radius: 28px;
+} 
+
+.btn-container:hover {
+    transition: 0.9s ease;
+    background-color: #1b1b1b;
+}
+
+.btn-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: flex; 
+}
+
+.post-btn {
+    margin-top: 20px;
+}
+
+.post-btn button {
+    padding: 15px 100px;
+    font-size: 1.3rem;
+    border-style: none;
+    border-radius: 28px;
+}
+
+.post-btn button:hover {
+    background-color: #D7DBDC;
+    transition: 0.9s ease;
+    cursor: pointer;
+}
+
+.profile {
+    margin-top: 150px; 
+    display: flex;
+    gap: 20px;
+    padding: 10px 18px;
+    border-radius: 28px;
+}
+
+.profile:hover {
+    background-color: #1b1b1b;
+    transition: 0.9s ease;
+}
+
+.handle {
+    color: #7a7070;
+    margin-top: 5px;
+}
+
+.pfp img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
