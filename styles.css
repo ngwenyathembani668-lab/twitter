@@ -14,6 +14,7 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #000;
     color: #fff;
+    max-height: 100vh;
     /* margin-bottom: 300px; */
 }
 
@@ -27,14 +28,14 @@ svg {
 main {
     display: flex;
     width: 100%;
-    padding-left: 10%;
+    /* padding-left: 5%; */
 }
 
 
 /* side-bar section!! */
 .side-bar {
     width: 27% auto;
-    padding: 1% 0 0 2%;
+    padding: 1% 0 0 5%;
     height: 100%;
 }
 
@@ -115,32 +116,42 @@ main {
 
 
 /* fyp section!! */
-
 .fyp-section {
-    width: 60%;
+    width: 77vw;
     display: flex;
     margin-left: 40px;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .posts {
-    border: 1.4px solid #7a7070;
-    width: 65%;
     border-top: none;
-    position: relative;
-    height: 100%;
+    /* position: relative; */
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll; */
 }
 
 .header {
     display: flex;
     background-color: transparent;
     height: 60px;
-    /* align-items: center; */
-    position: sticky;
+    border-left: 1px solid #7a7070;
+    border-right: 1px solid #7a7070;
+    position: fixed;
     top: 0;
-    width: 100%;
+    width: 36rem;
+    /* width: 77vw; */
+    /* max-width: fit-content; */
+    background: #39251c20;
+    backdrop-filter: blur(10px);   
     z-index: 1;
     border-bottom: 1px solid #7a7070;
     justify-content: space-around;
+}
+.header-btn {
+    max-width: 50vw;
 }
 
 .active {
@@ -192,10 +203,14 @@ main {
 
 .tweet-box {
     display: flex;
+    margin-top: 60px;
+    border-left: 1px solid #7a7070;
+    border-right: 1px solid #7a7070;
+    /* overflow-y: scroll; */
     /* flex-direction: column; */
     gap: 10px;
     border-bottom: 1px solid #7a7070;
-
+    width: 36rem;
 }
 
 .tweet-content {
@@ -203,7 +218,7 @@ main {
     flex-direction: column;
     padding: 10px 0 10px 0;
     width: 95%;
-} 
+}
 
 .bottom {
     margin: 20px 30px 0 0;
@@ -246,9 +261,121 @@ main {
     border-radius: 24px;
     border: none;
     font-weight: 600;
-    background-color: #7a7070;
 }
 
 .extra-post button:hover {
     transition: 0.9s ease;
+    background-color: #D7DBDC;
+}
+
+
+/* show more!! */
+.show-more p {
+    color: rgb(29, 155, 240);
+}
+
+.show-more {
+    border-bottom: 1px solid #7a7070;
+    height: 55px;
+    border-left: 1px solid #7a7070;
+    border-right: 1px solid #7a7070;
+    display: flex;
+    align-items: center;
+    width: 36rem;
+    justify-content: center;
+}
+
+
+/* tweets!! */
+.tweets {
+    width: 100%;
+    display: flex;
+    border-left: 1px solid #7a7070;
+    border-right: 1px solid #7a7070;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7a7070;
+}
+
+.tweet-pfp img {
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
+}
+
+.tweet-pfp {
+    padding: 15px 10px 0 20px;
+}
+
+.tweet-post {
+    width: 100%;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 22rem;
+}
+
+.tweet-head {
+    display: flex;
+    padding: 17px 15px 0 0;
+    justify-content: space-between;
+}
+
+.tweet-handle {
+    color: #7a7070;
+    font-size: 1.1rem;
+}
+
+.tweet-handle strong {
+    color: #fff;
+}
+
+.head-options svg {
+    fill: #7a7070;
+    width: 21px;
+}
+
+.caption p {
+    margin-top: 6px;
+    font-size: 1.1rem;
+}
+
+.tweet-cont img {
+    width: 22rem;
+    border-radius: 14px;
+}
+
+.tweet-cont {
+    margin-top: 40px;
+}
+
+.tweet-likes {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.share {
+    padding-right: 20px;
+}
+
+.stats p svg {
+    width: 20px;
+    margin-right: 4px;
+    fill: #7a7070;
+}
+
+.stats p {
+    font-size: 0.95rem;
+    color: #7a7070;
+    display: flex;
+    align-items: center;
+}
+
+.share svg {
+    width: 20px;
+    fill: #7a7070;
+    margin-left: 5px;
 }
