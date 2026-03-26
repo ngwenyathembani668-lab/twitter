@@ -1,0 +1,135 @@
+/* Extra large screens (4K monitors, desktops) */
+@media (min-width: 2560px) {
+
+    /* side-bar!! */
+    .side-bar a {
+        font-size: 2.8rem;
+    }
+
+    .side-bar {
+        width: 34rem;
+    }
+
+    .btn-container {
+        margin-bottom: 20px;
+    }
+
+    .icon svg {
+        width: 50px;
+    }
+
+    .post-btn button {
+        padding: 30px 220px;
+        border-radius: 50px;
+        margin-top: 50px;
+        font-size: 2.2rem;
+    }
+
+    .pfp img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name p {
+        font-size: 2.1rem;
+    }
+
+    .options i {
+        font-size: 3.1rem;
+    }
+
+    /* fyp section!! */
+    .posts {
+        /* width: 60rem; */
+    }
+
+    .header {
+        width: 100rem;
+        height: 100px;
+    }
+
+    .header-btn p {
+        font-size: 2.1rem;
+    }
+
+
+    /* tweet box!! */
+    .tweet-box {
+        width: 100rem;
+        margin-top: 100px;
+        padding: 20px 40px;
+    }
+
+    .tweet-pic img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .input input,
+    ::placeholder {
+        height: 170px;
+        font-size: 3.3rem;
+        padding-left: 20px;
+    }
+
+    .reply svg {
+        width: 65px;
+    }
+
+    .reply p {
+        font-size: 2.1rem;
+    }
+
+    .tool svg {
+        width: 45px;
+        margin-top: 15px;
+    }
+
+    .extra-post button {
+        
+    }
+
+}
+
+/* Large desktops (1920px - Full HD) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium desktops / laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        width: calc(100% - 250px);
+    }
+}
+
+/* Tablets (portrait & landscape) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+        display: none;
+        /* hide sidebar */
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    nav {
+        display: none;
+        /* replace with hamburger menu */
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
