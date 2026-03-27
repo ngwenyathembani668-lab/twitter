@@ -144,10 +144,11 @@ main {
     top: 0;
     width: 36rem;
     background: #39251c20;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid #7a7070;
     justify-content: space-around;
 }
+
 .header-btn {
     max-width: 50vw;
 }
@@ -254,7 +255,7 @@ main {
 }
 
 .tweets {
-   max-width: 36rem;
+    max-width: 36rem;
 }
 
 .extra-post button {
@@ -390,6 +391,7 @@ main {
 
 .search-input {
     position: fixed;
+    top: 0;
     padding-top: 12px;
     margin-bottom: 80px;
     background-color: #000;
@@ -423,7 +425,7 @@ main {
 
 .subscribe-h {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .subscribe-h span {
@@ -459,7 +461,7 @@ main {
     background-color: #0176c5;
     transition: 0.9s ease;
     cursor: pointer;
-}  
+}
 
 .today-h svg {
     width: 18px;
@@ -521,14 +523,14 @@ main {
 
 
 /* explore tab!! */
-.explore-tab {
+/* .explore-tab {
     width: 37rem;
-}
+} */
 
 .explore-header {
     position: fixed;
     margin-bottom: 150px;
-     background: #39251c20;
+    background: #39251c20;
     backdrop-filter: blur(10px);
     width: 36rem;
     border: 1px solid #7a7070;
@@ -551,7 +553,7 @@ main {
 .input-container2 input {
     height: 45px;
     background: #000;
-    border: 1.9px solid #7a7070;
+    border: 3px solid #2F3336;
     width: 30rem;
     padding-left: 40px;
     border-radius: 27px;
@@ -617,8 +619,8 @@ main {
 .list-container {
     width: 36rem;
     padding: 18px 15px 10px 15px;
-    border-left: 1px solid #71767B;
-    border-right: 1px solid #71767B;
+    border-left: 1.5px solid  #2F3336;;
+    border-right: 1.5px solid #2F3336;;
 }
 
 .list-container:hover {
