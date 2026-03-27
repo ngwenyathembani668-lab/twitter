@@ -654,4 +654,133 @@ footer {
     color: #71767B;
     font-size: 0.9rem;
     margin-top: 5px;
+}/* login overlay styles */
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.login-overlay.hidden {
+    display: none;
+}
+
+.login-card {
+    width: min(470px, 95%);
+    background: #fff;
+    color: #0a0a0a;
+    border-radius: 18px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    padding: 32px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-card h1 {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.login-card input {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    margin-top: 4px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+.login-card button:hover {
+    background: #333;
+}
+
+.login-error {
+    color: #c01d1d;
+    min-height: 1.2rem;
+    margin-top: 8px;
+    font-size: 0.92rem;
+}
+
+/* new posts banner */
+.new-posts-banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -115%);
+    opacity: 0;
+    padding: 10px 14px;
+    border-radius: 0 0 14px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #0a0a0a, #141414);
+    border: 1px solid #555;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.45);
+    color: #fff;
+    z-index: 1000;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    font-size: 0.95rem;
+}
+
+.new-posts-banner.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.new-posts-banner .banner-text {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.new-posts-banner button {
+    background: rgba(29, 155, 240, 0.15);
+    border: 1px solid rgba(29, 155, 240, 0.45);
+    color: #1d9bf0;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.new-posts-banner button:hover {
+    background: rgba(29, 155, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    .login-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .new-posts-banner {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
 }

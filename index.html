@@ -16,6 +16,21 @@
 
 <body>
 
+    <div id="new-posts-banner" class="new-posts-banner" aria-live="polite" aria-atomic="true">
+        <span class="banner-text">🚀 New posts are available. Tap to view.</span>
+        <button id="view-posts-btn" type="button">Show feed</button>
+    </div>
+
+    <div id="login-overlay" class="login-overlay" role="dialog" aria-modal="true" aria-label="Login">
+        <div class="login-card">
+            <h1>Get started</h1>
+            <p>Enter your workspace password to continue.</p>
+            <input id="passwordInput" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password" />
+            <button id="loginBtn" type="button">Login</button>
+            <p id="loginError" class="login-error" aria-live="assertive"></p>
+        </div>
+    </div>
+
     <!-- responsive header!! -->
     <div class="header-m">
 
@@ -1178,6 +1193,69 @@
         </section>
 
     </main>
+
+    <script>
+        (function(){
+            const loginOverlay = document.getElementById('login-overlay');
+            const loginBtn = document.getElementById('loginBtn');
+            const passwordInput = document.getElementById('passwordInput');
+            const loginError = document.getElementById('loginError');
+            const banner = document.getElementById('new-posts-banner');
+            const viewPostsBtn = document.getElementById('view-posts-btn');
+            const PASSWORD = '1234';
+            const STORAGE_KEY = 'xCloneLoggedIn';
+
+            function unlockApp() {
+                loginOverlay.classList.add('hidden');
+                loginError.textContent = '';
+                passwordInput.value = '';
+                startBannerTimer();
+            }
+
+            function lockApp() {
+                loginOverlay.classList.remove('hidden');
+                banner.classList.remove('show');
+            }
+
+            function startBannerTimer() {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                    setTimeout(() => banner.classList.remove('show'), 8000);
+                }, 10000); // 10 seconds after login / page access
+            }
+
+            function checkLogin() {
+                const loggedIn = sessionStorage.getItem(STORAGE_KEY) === 'true';
+                if (loggedIn) {
+                    unlockApp();
+                } else {
+                    lockApp();
+                }
+            }
+
+            loginBtn.addEventListener('click', () => {
+                const value = passwordInput.value.trim();
+                if (value === PASSWORD) {
+                    sessionStorage.setItem(STORAGE_KEY, 'true');
+                    unlockApp();
+                } else {
+                    loginError.textContent = 'Invalid password. Please use 1234.';
+                }
+            });
+
+            passwordInput.addEventListener('keyup', (event)=> {
+                if (event.key === 'Enter') { loginBtn.click(); }
+            });
+
+            viewPostsBtn.addEventListener('click', () => {
+                banner.classList.remove('show');
+                banner.textContent = '';
+            });
+
+            // Force login on hard load even if session exists in local storage.
+            checkLogin();
+        })();
+    </script>
 
 </body>
 
